@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-touchId-plugins-echoswift" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>touchAuthentication</name>
+    <js-module name="TouchAuthentication" src="www/touchAuthentication.js">
+    <clobbers target="touchAuthentication" />
+    </js-module>
+    <platform name="ios">
+  <config-file target="config.xml" parent="/*">
+    <feature name="TouchAuthentication">
+      <param name="ios-package" value="TouchAuthentication" />
+    </feature>
+  </config-file>
+  <source-file src="src/ios/TouchAuthentication.swift" />
+      <dependency id="cordova-plugin-add-swift-support" version="1.5.0"/>
+  </platform>
+
+</plugin>
+
